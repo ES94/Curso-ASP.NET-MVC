@@ -1,0 +1,6 @@
+C:\Users\Julio y Gladys\Desktop\Curso-ASP.NET-MVC\BlogGo\BlogGo.Datos\bin\Debug\netstandard2.0\BlogGo.Datos.deps.json
+C:\Users\Julio y Gladys\Desktop\Curso-ASP.NET-MVC\BlogGo\BlogGo.Datos\bin\Debug\netstandard2.0\BlogGo.Datos.dll
+C:\Users\Julio y Gladys\Desktop\Curso-ASP.NET-MVC\BlogGo\BlogGo.Datos\obj\Debug\netstandard2.0\BlogGo.Datos.csprojAssemblyReference.cache
+C:\Users\Julio y Gladys\Desktop\Curso-ASP.NET-MVC\BlogGo\BlogGo.Datos\obj\Debug\netstandard2.0\BlogGo.Datos.csproj.CoreCompileInputs.cache
+C:\Users\Julio y Gladys\Desktop\Curso-ASP.NET-MVC\BlogGo\BlogGo.Datos\obj\Debug\netstandard2.0\BlogGo.Datos.AssemblyInfoInputs.cache
+C:\Users\Julio y Gladys\Desktop\Curso-ASP.NET-MVC\BlogGo\BlogGo.Datos\obj\Debug\netstandard2.0\BlogGo.Datos.AssemblyInfo.cs

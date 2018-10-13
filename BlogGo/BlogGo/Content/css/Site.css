@@ -1,0 +1,11 @@
+﻿.titulo-blog {
+    font-weight: 400 !important;
+    /* Para la subcadena 'Go' del título, font-weight: 800 */
+}
+
+.boton-buscar {
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    border-radius: .25rem !important;
+    text-transform: none !important;
+}
