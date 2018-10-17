@@ -1,10 +1,10 @@
 ﻿@{
     ViewBag.Title = "Página de inicio";
 }
+@Html.Partial("~/Views/Shared/_BarraNavegacion.cshtml")
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url(../../img/home-bg.jpg)">
-    <!-- url('img/home-bg.jpg') -->
+<header class="masthead fondo-inicio">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -23,10 +23,6 @@
     <div class="row">
         <!-- Entradas del blog -->
         <div class="col-md-8">
-            <h1 class="my-4">
-                Page Heading
-                <small>Secondary Text</small>
-            </h1>
             <!-- Blog Post -->
             <div class="card mb-4">
                 <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
@@ -40,6 +36,7 @@
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
+
             <!-- Blog Post -->
             <div class="card mb-4">
                 <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
@@ -53,6 +50,7 @@
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
+
             <!-- Blog Post -->
             <div class="card mb-4">
                 <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
@@ -66,6 +64,7 @@
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
+
             <!-- Paginación -->
             <ul class="pagination justify-content-center mb-4">
                 <li class="page-item">
@@ -76,6 +75,7 @@
                 </li>
             </ul>
         </div>
+
         <!-- Sección lateral -->
         <div class="col-md-4">
             @Html.Partial("~/Views/Shared/_SeccionLateralPartial.cshtml")
@@ -83,4 +83,5 @@
     </div>
     <!-- /.row -->
 </div>
-<hr>
+
+<hr />

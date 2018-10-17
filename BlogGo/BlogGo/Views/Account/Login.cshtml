@@ -1,9 +1,98 @@
-﻿@using BlogGo.Models
-@model LoginViewModel
+﻿@model BlogGo.Models.LoginViewModel
 @{
     ViewBag.Title = "Iniciar sesión";
 }
 
+<!-- Inicio de sesión -->
+<header class="masthead text-white text-center fondo-login">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Inicia sesión en BlogGo!</h1>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <section id="loginForm">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <!-- Correo -->
+                        <div class="form-group row justify-content-center">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Ingresa tu correo" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <!-- Contraseña -->
+                        <div class="form-group row justify-content-center">
+                            <div class="col-md-6">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Ingresa tu contraseña" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <!-- Enlace a restablecer contraseña -->
+                        <div class="form-group row justify-content-center">
+                            <!-- Habilite esta opción después de habilitar la confirmación de la cuenta para la función de restablecimiento de contraseña -->
+                            <div class="col-md-6">
+                                <p class="texto-login">
+                                    @Html.ActionLink("¿Has olvidado tu contraseña?", "ForgotPassword", "Account", null, new { @class = "enlace-loginreg" })
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Recordar cuenta -->
+                        <div class="form-group row justify-content-center">
+                            <div class="col-md-5">
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe)
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de iniciar sesión -->
+                        <div class="form-group row justify-content-center">
+                            <div class="col-md-6">
+                                <input type="submit" value="Iniciar sesión" class="btn btn-block btn-lg btn-primary boton-loginreg" />
+                            </div>
+                        </div>
+
+                        <!-- Enlace a registración -->
+                        <div class="form-group row justify-content-center">
+                            <div class="card col-md-10">
+                                <div class="card-body">
+                                    <p class="texto-login texto-login-registracion">
+                                        ¿Nuevo en BlogGo?
+                                        @Html.ActionLink("Regístrate como nuevo usuario", "Register", "Account", null, new { @class = "enlace-login-registracion" })
+                                        .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </section>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Enlace a inicio -->
+    <div class="row">
+        <div class="col-md-4">
+            <p class="texto-login">
+                @Html.ActionLink("<< Volver a Inicio", "Index", "Home", null, new { @class = "enlace-loginreg" })
+            </p>
+        </div>
+    </div>
+</header>
+
+
+@*
 <h2>@ViewBag.Title.</h2>
 <div class="row">
     <div class="col-md-8">
@@ -46,10 +135,10 @@
                         </p>
                     </div>
                 </div>
-                @* Habilite esta opción después de habilitar la confirmación de la cuenta para la función de restablecimiento de contraseña
+                Habilite esta opción después de habilitar la confirmación de la cuenta para la función de restablecimiento de contraseña
                     <p>
                         @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
-                    </p>*@
+                    </p>
             }
         </section>
     </div>
@@ -59,6 +148,7 @@
         </section>
     </div>
 </div>
+*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

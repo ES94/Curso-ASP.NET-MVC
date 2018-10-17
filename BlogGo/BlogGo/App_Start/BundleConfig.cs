@@ -17,7 +17,11 @@ namespace BlogWeb
              .Include(
              "~/Content/vendor/bootstrap/css/bootstrap.min.css",
              "~/Content/vendor/fontawesome-free/css/all.min.css",
-             "~/Content/css/clean-blog.min.css"));
+             "~/Content/vendor/simple-line-icons/css/simple-line-icons.css",
+             "~/Content/css/clean-blog.min.css",
+             "~/Content/css/landing-page.css",
+             "~/Content/css/landing-page.min.css",
+             "~/Content/css/Site.css"));
 
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
             // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite.
